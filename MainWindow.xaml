@@ -27,6 +27,8 @@
             <RowDefinition Height="40*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        
+        <Label Content=" Machine : " Grid.Column="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch"/>
+        <TextBlock  x:Name="txtMachineStr" Background="White" Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Stretch" Grid.ColumnSpan="4"/>
+
     </Grid>
 </Window>
