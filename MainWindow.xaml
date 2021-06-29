@@ -25,6 +25,10 @@
             <RowDefinition Height="40*"/>
             <RowDefinition Height="5*"/>
             <RowDefinition Height="40*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="40*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Label Content=" Machine : " Grid.Column="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch"/>
@@ -33,6 +37,8 @@
         <TextBlock  x:Name="txtTimeStr"   Background="White"  Grid.Column="3" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
         <Button  x:Name="btnAddMachineNameString" Content="Add ..." Grid.Column="5" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch"/>
         <Button  x:Name="btnAddTimeString"  Content="Add ..." Grid.Column="5" HorizontalAlignment="Stretch" Grid.Row="3" VerticalAlignment="Stretch"/>
-
+        <Label Content="Объект : " HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="5" VerticalAlignment="Stretch"/>
+        <TextBlock  x:Name="txtObjectStr"   Background="White"  Grid.Column="3" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        <Button  x:Name="btnAddObjString"  Content="Add ..." Grid.Column="5" HorizontalAlignment="Stretch" Grid.Row="5" VerticalAlignment="Stretch"/>
     </Grid>
 </Window>
