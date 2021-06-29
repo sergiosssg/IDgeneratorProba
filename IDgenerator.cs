@@ -10,15 +10,23 @@ namespace IDgeneratorProba
     public class IDgenerator
     {
         private string _deviceId;
+        private long _deviceHash;
 
         public IDgenerator()
         {
-            _deviceId = new DeviceIdBuilder().AddMacAddress().AddProcessorId().AddMotherboardSerialNumber().ToString();
+            DeviceIdBuilder dIDb = new DeviceIdBuilder();
+            _deviceId = dIDb.AddMacAddress().AddProcessorId().AddMotherboardSerialNumber().ToString();
+            _deviceHash = dIDb.AddMacAddress().GetHashCode();
         }
 
         public string getIDOnFluent()
         {
             return _deviceId;
+        }
+
+        public long getHashOnFluent()
+        {
+            return _deviceHash;
         }
     }
 }
