@@ -24,5 +24,10 @@ namespace IDgeneratorProba
         {
             InitializeComponent();
         }
+
+        private void Window_Initialized(object sender, EventArgs e)
+        {
+            Console.WriteLine("The window is initialized");
+        }
     }
 }
