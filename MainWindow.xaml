@@ -28,7 +28,9 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Label Content=" Machine : " Grid.Column="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch"/>
-        <TextBlock  x:Name="txtMachineStr" Background="White" Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Stretch" Grid.ColumnSpan="4"/>
+        <TextBlock  x:Name="txtMachineStr" Background="White" Grid.Column="3" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ColumnSpan="3"/>
+        <Label Content="Time : " Grid.Column="1"   HorizontalContentAlignment="Right"  VerticalContentAlignment="Center"  HorizontalAlignment="Stretch" Grid.Row="3" VerticalAlignment="Stretch"/>
+        <TextBlock  x:Name="txtTimeStr"   Background="White"  Grid.Column="3" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ColumnSpan="3"/>
 
     </Grid>
 </Window>
