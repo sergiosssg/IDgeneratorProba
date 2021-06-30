@@ -21,11 +21,15 @@ namespace IDgeneratorProba
     public partial class MainWindow : Window
     {
         private IDgenerator _idGenerator;
+        private DateTime _currentTime;
 
         public MainWindow()
         {
+            long llHashTime;
             InitializeComponent();
             _idGenerator = new IDgenerator();
+            _currentTime = DateTime.Now;//new DateTime();
+            llHashTime = Math.Abs( _currentTime.ToBinary());
         }
 
 
