@@ -14,9 +14,20 @@ namespace IDgeneratorProba
 
         public IDgenerator()
         {
+            long iRes;
+
+            int iMAChash;
+            int iProcessorID;
+            int iMotherBoardNumber;
             DeviceIdBuilder dIDb = new DeviceIdBuilder();
             _deviceId = dIDb.AddMacAddress().AddProcessorId().AddMotherboardSerialNumber().ToString();
-            _deviceHash = dIDb.AddMacAddress().GetHashCode();
+            iMAChash = dIDb.AddMacAddress().GetHashCode();
+            DeviceIdBuilder MACAddr = dIDb.AddMacAddress();
+            iProcessorID = dIDb.AddProcessorId().GetHashCode();
+            DeviceIdBuilder ProcessorID = dIDb.AddProcessorId();
+            iMotherBoardNumber = dIDb.AddMotherboardSerialNumber().GetHashCode();
+            DeviceIdBuilder MotheBoardNumber = dIDb.AddMotherboardSerialNumber();
+            iRes = 0xFF << 8;
         }
 
         public string getIDOnFluent()
