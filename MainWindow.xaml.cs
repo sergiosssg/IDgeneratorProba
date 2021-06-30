@@ -20,14 +20,18 @@ namespace IDgeneratorProba
     /// </summary>
     public partial class MainWindow : Window
     {
+        private IDgenerator _idGenerator;
+
         public MainWindow()
         {
             InitializeComponent();
+            _idGenerator = new IDgenerator();
         }
 
-        private void Window_Initialized(object sender, EventArgs e)
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("The window is initialized");
+            Console.WriteLine("The window is loading ...");
         }
     }
 }
