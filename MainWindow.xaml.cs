@@ -37,6 +37,11 @@ namespace IDgeneratorProba
 
 
             llHashTime = Math.Abs( _currentTime.ToBinary());
+
+
+            long llLeftHashTime = llHashTime << 32;
+
+            Console.WriteLine();
         }
 
 
