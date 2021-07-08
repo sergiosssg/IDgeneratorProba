@@ -19,7 +19,7 @@ namespace IDgeneratorProba
 
 
             _deviceId = sMACaddr;
-            _deviceHash = Math.Abs(sMACaddr.GetHashCode()); ;
+            _deviceHash = Math.Abs(sMACaddr.GetHashCode());
         }
 
         public string getIDOnFluent()
