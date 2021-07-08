@@ -26,10 +26,22 @@ namespace IDgeneratorProba
         public MainWindow()
         {
             long llHashTime;
+            int iOfData;
             InitializeComponent();
             _idGenerator = new IDgenerator();
             _currentTime = DateTime.Now;//new DateTime();
+
+            iOfData = _currentTime.GetHashCode();
+
+            Console.WriteLine();
+
+
             llHashTime = Math.Abs( _currentTime.ToBinary());
+
+
+            long llLeftHashTime = llHashTime << 32;
+
+            Console.WriteLine();
         }
 
 
