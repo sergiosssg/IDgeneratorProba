@@ -27,6 +27,8 @@ namespace IDgeneratorProba
 
             byte[] bArray = StringToByteArray(  sMACaddr);
 
+            long lMACaddrHash = ByteArrayToLong(bArray);
+
             _deviceHash = Math.Abs(sMACaddr.GetHashCode());
         }
 
@@ -118,7 +120,10 @@ namespace IDgeneratorProba
 
         private static long ByteArrayToLong(byte[] hexArray)
         {
-            return Enumerable.Range(0, hexArray.Length).Select((n) => hexArray[n] >> ((hexArray.Length - n) * 8)).Sum();
+            var lLnnn = Enumerable.Range(0, hexArray.Length).Select((n) => hexArray[n]).ToArray();
+            var lN0 = Enumerable.Range(0, hexArray.Length).Select((n) => (hexArray.Length - n)).ToArray();
+            var lLl = Enumerable.Range(0, hexArray.Length).Select((n) => hexArray[n] <<  ((hexArray.Length - n) * 8)).ToArray();
+            return Enumerable.Range(0, hexArray.Length).Select((n) => hexArray[n] << ((hexArray.Length - n) * 8)).Sum();
         }
 
     }
