@@ -120,8 +120,7 @@ namespace IDgeneratorProba
         {
             long retLong = 0L;
 
-            int i = 0;
-            var lSum = hexArray.Select(n => (long)(  n << ( 8 * (hexArray.Length )))).Sum();
+            retLong = Enumerable.Range(0, hexArray.Length).Select((n) => hexArray[n] >> ((hexArray.Length - n) * 8)).Sum();
 
             return retLong;
         }
