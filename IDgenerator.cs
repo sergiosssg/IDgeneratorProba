@@ -118,11 +118,7 @@ namespace IDgeneratorProba
 
         private static long ByteArrayToLong(byte[] hexArray)
         {
-            long retLong = 0L;
-
-            retLong = Enumerable.Range(0, hexArray.Length).Select((n) => hexArray[n] >> ((hexArray.Length - n) * 8)).Sum();
-
-            return retLong;
+            return Enumerable.Range(0, hexArray.Length).Select((n) => hexArray[n] >> ((hexArray.Length - n) * 8)).Sum();
         }
 
     }
