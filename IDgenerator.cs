@@ -13,6 +13,7 @@ namespace IDgeneratorProba
         private string _deviceId;
         private long _deviceHash;
         private string[] _MACaddres_as_stringArray;
+        private byte[] _MACaddres_as_byteArray;
 
         public IDgenerator()
         {
@@ -120,6 +121,16 @@ namespace IDgeneratorProba
 
             return arrayReturnedMAC;
         }
+
+        private static byte[] GetSystemMACID_asByteArray(string[] asMACaddress)
+        {
+            byte[] arrayReturnedMAC = new byte[6];
+
+            arrayReturnedMAC = asMACaddress.Select(byte.Parse).ToArray();
+
+            return arrayReturnedMAC;
+        }
+
 
 
         private static byte[] StringToByteArray(string hex)
