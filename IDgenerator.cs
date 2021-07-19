@@ -21,7 +21,7 @@ namespace IDgeneratorProba
 
 
             _MACaddres_as_stringArray = GetSystemMACID_asStringArray();
-
+            _MACaddres_as_byteArray = GetSystemMACID_asByteArray(_MACaddres_as_stringArray);
 
             _deviceId = sMACaddr;
 
