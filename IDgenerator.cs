@@ -126,7 +126,9 @@ namespace IDgeneratorProba
         {
             byte[] arrayReturnedMAC = new byte[6];
 
-            arrayReturnedMAC = asMACaddress.Select(byte.Parse).ToArray();
+            var iterable = asMACaddress.Select(byte.Parse);
+
+            arrayReturnedMAC = iterable.ToArray();
 
             return arrayReturnedMAC;
         }
