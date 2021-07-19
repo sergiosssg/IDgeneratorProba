@@ -9,9 +9,16 @@ namespace IDgeneratorProba
     public class HashCodeFixture
     {
 
-        static long getHashFromARPaddress()
+        public static long getHashFromARPaddress()
         {
 
+
+            return 0L;
+        }
+
+
+        public static long getHashFromDateTime()
+        {
 
             return 0L;
         }
