@@ -113,6 +113,9 @@ namespace IDgeneratorProba
         {
             byte[] arrayReturnedMAC = new byte[6];
 
+            var arr = GetSystemMACID_asStringArray();
+
+            arrayReturnedMAC = arr.Select(byte.Parse).ToArray();
 
 
             return arrayReturnedMAC;
