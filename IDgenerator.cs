@@ -26,9 +26,9 @@ namespace IDgeneratorProba
             _deviceId = sMACaddr;
 
 
-            byte[] bArray = StringToByteArray(  sMACaddr);
+            _MACaddres_as_byteArray = StringToByteArray(  sMACaddr);
 
-            long lMACaddrHash = ByteArrayToLong(bArray);
+            long lMACaddrHash = ByteArrayToLong(_MACaddres_as_byteArray);
 
             _deviceHash = Math.Abs(sMACaddr.GetHashCode());
         }
