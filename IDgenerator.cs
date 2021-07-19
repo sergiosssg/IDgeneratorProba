@@ -19,7 +19,7 @@ namespace IDgeneratorProba
             string sMACaddr = GetSystemMACID(); //GetSystemMACID("opkisup12.frunze.local");
 
 
-            _MACaddres_as_stringArray = GetSystemMACID_as_Array();
+            _MACaddres_as_stringArray = GetSystemMACID_asStringArray();
 
 
             _deviceId = sMACaddr;
@@ -75,7 +75,7 @@ namespace IDgeneratorProba
         }
 
 
-        private static string[] GetSystemMACID_as_Array() //( string systemName )
+        private static string[] GetSystemMACID_asStringArray() //( string systemName )
         {
             string[] arrayReturnedMAC = new string[6];
             ManagementScope theScope = new ManagementScope("\\\\" + Environment.MachineName + "\\root\\cimv2");
@@ -106,6 +106,16 @@ namespace IDgeneratorProba
                 Console.WriteLine(e.StackTrace);
             }
             return null;
+        }
+
+
+        private static byte[] GetSystemMACID_asByteArray()
+        {
+            byte[] arrayReturnedMAC = new byte[6];
+
+
+
+            return arrayReturnedMAC;
         }
 
 
